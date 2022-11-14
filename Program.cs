@@ -1,4 +1,4 @@
-﻿// int sonlar = 10000;
+// int sonlar = 10000;
 // // short sonlarcha = 100;
 // // long sonlarr = 10000000;
 // Console.Write("Ismingizni kiriting: ");
@@ -55,3 +55,6 @@ Console.Write("Enter his age: ");
 string hisAge = Console.ReadLine();
 int HisAge = Convert.ToInt32(hisAge);
 Console.WriteLine($"Difference between with your and his age is: " + (age - HisAge));
+
+
+
