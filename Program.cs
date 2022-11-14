@@ -44,14 +44,32 @@
 // System.Console.WriteLine(r);
 
 //converting
-Console.Write("Enter your name: ");
-string a = Console.ReadLine();
-Console.WriteLine($"Is your name {a}");
-Console.Write("Enter your age: ");
-string b = Console.ReadLine();
-int age = Convert.ToInt32(b);
-Console.WriteLine($"Succesfully converted. Converted string was " + age);
-Console.Write("Enter his age: ");
-string hisAge = Console.ReadLine();
-int HisAge = Convert.ToInt32(hisAge);
-Console.WriteLine($"Difference between with your and his age is: " + (age - HisAge));
+// Console.Write("Enter your name: ");
+// string a = Console.ReadLine();
+// Console.WriteLine($"Is your name {a}");
+// Console.Write("Enter your age: ");
+// string b = Console.ReadLine();
+// int age = Convert.ToInt32(b);
+// Console.WriteLine($"Succesfully converted. Converted string was " + age);
+// Console.Write("Enter his age: ");
+// string hisAge = Console.ReadLine();
+// int HisAge = Convert.ToInt32(hisAge);
+// int ageDifference= age - HisAge;
+// Console.WriteLine($"Difference between with your and his age is: " + (ageDifference));
+// Console.WriteLine($"Is age difference bigger than HisAge: {ageDifference>=HisAge}");
+// System.Console.WriteLine("------------------------------------");
+
+System.Console.WriteLine("===================");
+System.Console.Write("Type first number: ");
+string first = System.Console.ReadLine();
+int ifirst=Convert.ToInt32(first);
+System.Console.Write("Type second number: ");
+string second = System.Console.ReadLine();
+int isecond=Convert.ToInt32(second);
+System.Console.WriteLine($"Is first number bigger than second: {ifirst>isecond}");
+System.Console.WriteLine($"Is first number smaller than second: {ifirst<isecond}");
+System.Console.WriteLine($"Is first number bigger or equal to second: {ifirst>=isecond}");
+System.Console.WriteLine($"Is first number smaller or equal to second: {ifirst<=isecond}");
+System.Console.WriteLine($"Is first number equal second: {ifirst==isecond}");
+System.Console.WriteLine($"Is first number not equal to second: {ifirst!=isecond}");
+System.Console.WriteLine("=========================");
