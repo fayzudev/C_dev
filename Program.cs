@@ -73,3 +73,8 @@ Console.WriteLine($"Is your name {a}");
 // System.Console.WriteLine($"Is first number equal second: {ifirst==isecond}");
 // System.Console.WriteLine($"Is first number not equal to second: {ifirst!=isecond}");
 // System.Console.WriteLine("=========================");
+string[] friendsName = {"Ali","Vali","Kali"};
+int[] friendsAge = {21,22,34};
+string[] adress = {"Uychi", "chouchi","Shousheng"};
+
+System.Console.WriteLine($"Dostim {friendsName[0]}ning yoshi {friendsAge[0]}da va {adress[0]}da turadi");
