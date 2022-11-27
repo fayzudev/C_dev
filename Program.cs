@@ -46,7 +46,7 @@
 // //converting
 Console.Write("Enter your name: ");
 string a = Console.ReadLine();
-Console.WriteLine($"Is your name {a}");
+Console.WriteLine($"What's goin' on {a}");
 Console.Write("Enter your age: ");
 string b = Console.ReadLine();
 int b_age  = Convert.ToInt32(b);
@@ -96,25 +96,36 @@ System.Console.WriteLine("------------------------------------");
 //         : "Age of second person is bigger than age of first person!";
 // System.Console.WriteLine(message);
 
-switch(operation)
-{
-    case "+":
-        System.Console.WriteLine($"{b_age} + {HisAge} = {b_age+HisAge}");
-        break;
+// switch(operation)
+// {
+//     case "+":
+//         System.Console.WriteLine($"{b_age} + {HisAge} = {b_age+HisAge}");
+//         break;
 
-    case "-":
-        System.Console.WriteLine($"{b_age} - {HisAge} = {b_age-HisAge}");
-        break;
-    case "*":
-        System.Console.WriteLine($"{b_age} * {HisAge} = {b_age*HisAge}");
-        break;
-    case "/":
-        System.Console.WriteLine($"{b_age} / {HisAge} = {b_age/HisAge}");
-        break;
-    case "%":
-        System.Console.WriteLine($"{b_age} % {HisAge} = {b_age%HisAge}");
-        break;
-    default:
-            System.Console.WriteLine("Operation not found!");
-        break;
-}
+//     case "-":
+//         System.Console.WriteLine($"{b_age} - {HisAge} = {b_age-HisAge}");
+//         break;
+//     case "*":
+//         System.Console.WriteLine($"{b_age} * {HisAge} = {b_age*HisAge}");
+//         break;
+//     case "/":
+//         System.Console.WriteLine($"{b_age} / {HisAge} = {b_age/HisAge}");
+//         break;
+//     case "%":
+//         System.Console.WriteLine($"{b_age} % {HisAge} = {b_age%HisAge}");
+//         break;
+//     default:
+//             System.Console.WriteLine("Operation not found!");
+//         break;
+// }
+
+string result = operation switch
+{
+    "+" => $"{b_age} + {HisAge} = {b_age+HisAge}",
+    "-" => $"{b_age} - {HisAge} = {b_age-HisAge}",
+    "*" => $"{b_age} * {HisAge} = {b_age*HisAge}",
+    "/" => $"{b_age} / {HisAge} = {b_age/HisAge}",
+    "%" => $"{b_age} % {HisAge} = {b_age%HisAge}",
+    _  => "Operation not found!"
+};
+System.Console.WriteLine(result);
