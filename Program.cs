@@ -114,7 +114,7 @@ switch(operation)
     case "%":
         System.Console.WriteLine($"{b_age} % {HisAge} = {b_age%HisAge}");
         break;
-        default:
+    default:
             System.Console.WriteLine("Operation not found!");
         break;
 }
