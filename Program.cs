@@ -51,8 +51,8 @@ Console.Write("Enter your age: ");
 string b = Console.ReadLine();
 int b_age  = Convert.ToInt32(b);
 // Console.WriteLine($"Succesfully converted. Converted string was " + b_age);
-System.Console.WriteLine("Enter operation(+,-,*,/,%): ");
-string operation= System.Console.ReadLine();
+// System.Console.WriteLine("Enter operation(+,-,*,/,%): ");
+// string operation= System.Console.ReadLine();
 Console.Write("Enter his age: ");
 string hisAge = Console.ReadLine();
 int HisAge = Convert.ToInt32(hisAge);
@@ -119,13 +119,28 @@ System.Console.WriteLine("------------------------------------");
 //         break;
 // }
 
-string result = operation switch
+// string result = operation switch
+// {
+//     "+" => $"{b_age} + {HisAge} = {b_age+HisAge}",
+//     "-" => $"{b_age} - {HisAge} = {b_age-HisAge}",
+//     "*" => $"{b_age} * {HisAge} = {b_age*HisAge}",
+//     "/" => $"{b_age} / {HisAge} = {b_age/HisAge}",
+//     "%" => $"{b_age} % {HisAge} = {b_age%HisAge}",
+//     _  => "Operation not found!"
+// };
+// System.Console.WriteLine(result);
+
+if (b_age>HisAge)
 {
-    "+" => $"{b_age} + {HisAge} = {b_age+HisAge}",
-    "-" => $"{b_age} - {HisAge} = {b_age-HisAge}",
-    "*" => $"{b_age} * {HisAge} = {b_age*HisAge}",
-    "/" => $"{b_age} / {HisAge} = {b_age/HisAge}",
-    "%" => $"{b_age} % {HisAge} = {b_age%HisAge}",
-    _  => "Operation not found!"
-};
-System.Console.WriteLine(result);
+    int count=0;
+    while(count<b_age)
+    {
+        System.Console.WriteLine(count);
+        count++;
+    }
+
+}
+else
+{
+    System.Console.WriteLine("404");
+}
