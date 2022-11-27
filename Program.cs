@@ -44,20 +44,20 @@
 // System.Console.WriteLine(r);
 
 // //converting
-// Console.Write("Enter your name: ");
-// string a = Console.ReadLine();
-// Console.WriteLine($"Is your name {a}");
-// Console.Write("Enter your age: ");
-// string b = Console.ReadLine();
-// int age = Convert.ToInt32(b);
-// Console.WriteLine($"Succesfully converted. Converted string was " + age);
-// Console.Write("Enter his age: ");
-// string hisAge = Console.ReadLine();
-// int HisAge = Convert.ToInt32(hisAge);
-// int ageDifference= age - HisAge;
-// Console.WriteLine($"Difference between with your and his age is: " + (ageDifference));
-// Console.WriteLine($"Is age difference bigger than HisAge: {ageDifference>=HisAge}");
-// System.Console.WriteLine("------------------------------------");
+Console.Write("Enter your name: ");
+string a = Console.ReadLine();
+Console.WriteLine($"Is your name {a}");
+Console.Write("Enter your age: ");
+string b = Console.ReadLine();
+int b_age  = Convert.ToInt32(b);
+Console.WriteLine($"Succesfully converted. Converted string was " + b_age);
+Console.Write("Enter his age: ");
+string hisAge = Console.ReadLine();
+int HisAge = Convert.ToInt32(hisAge);
+int ageDifference= b_age - HisAge;
+Console.WriteLine($"Difference between with your and his age is: " + (ageDifference));
+Console.WriteLine($"Is age difference bigger than HisAge: {ageDifference>=HisAge}");
+System.Console.WriteLine("------------------------------------");
 
 // System.Console.WriteLine("===================");
 // System.Console.Write("Type first number: ");
@@ -73,3 +73,24 @@
 // System.Console.WriteLine($"Is first number equal second: {ifirst==isecond}");
 // System.Console.WriteLine($"Is first number not equal to second: {ifirst!=isecond}");
 // System.Console.WriteLine("=========================");
+
+if (b_age==HisAge)
+{
+    System.Console.WriteLine($"Age of 1 person {b_age} is equal to age of second person {HisAge}");
+}
+else if(b_age>HisAge)
+{
+    System.Console.WriteLine($"Age of 1 person is bigger than age of second person!");
+}
+
+else
+{
+    System.Console.WriteLine($"Age of second person is bigger than age of first person!");
+}
+
+string message=
+    b_age>HisAge
+        ? "Age of 1 person is bigger than age of second person!"
+        : "Age of second person is bigger than age of first person!";
+System.Console.WriteLine(message);
+
