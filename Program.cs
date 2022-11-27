@@ -44,15 +44,17 @@
 // System.Console.WriteLine(r);
 
 // //converting
-Console.Write("Enter your name: ");
-string a = Console.ReadLine();
-Console.WriteLine($"What's goin' on {a}");
+// Console.Write("Enter your name: ");
+// string a = Console.ReadLine();
+// Console.WriteLine($"What's goin' on {a}");
 Console.Write("Enter your age: ");
 string b = Console.ReadLine();
 int b_age  = Convert.ToInt32(b);
 // Console.WriteLine($"Succesfully converted. Converted string was " + b_age);
 // System.Console.WriteLine("Enter operation(+,-,*,/,%): ");
 // string operation= System.Console.ReadLine();
+System.Console.WriteLine("Enter operation(+,-,*,/,%): ");
+string operation = System.Console.ReadLine();
 Console.Write("Enter his age: ");
 string hisAge = Console.ReadLine();
 int HisAge = Convert.ToInt32(hisAge);
@@ -129,14 +131,36 @@ System.Console.WriteLine("------------------------------------");
 //     _  => "Operation not found!"
 // };
 // System.Console.WriteLine(result);
+string result=operation switch
+{
+    "+" => $"{b_age} + {HisAge} = {b_age+HisAge}",
+    "-" => $"{b_age} - {HisAge} = {b_age-HisAge}",
+    "*" => $"{b_age} * {HisAge} = {b_age*HisAge}",
+    "/" => $"{b_age} / {HisAge} = {b_age/HisAge}",
+    "%" => $"{b_age} % {HisAge} = {b_age%HisAge}",
+    _   => "Operation not found"
+};
+System.Console.WriteLine(result);
+// int Result=Convert.ToInt32(result);
+string password = "";
+do
+{
+    System.Console.Write("Enter password: ");
+    password = System.Console.ReadLine();
+}
+while(password != "123456");
 
-if (b_age>HisAge)
+if (b_age>0)
 {
     int count=0;
-    while(count<b_age)
+    while(count < b_age)
     {
-        System.Console.WriteLine(count);
-        count++;
+        if(count % 2==0)
+        {
+           Console.WriteLine(count);
+            
+        }
+        count+=2;
     }
 
 }
@@ -144,3 +168,4 @@ else
 {
     System.Console.WriteLine("404");
 }
+
