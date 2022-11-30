@@ -73,8 +73,26 @@ Console.WriteLine($"Is your name {a}");
 // System.Console.WriteLine($"Is first number equal second: {ifirst==isecond}");
 // System.Console.WriteLine($"Is first number not equal to second: {ifirst!=isecond}");
 // System.Console.WriteLine("=========================");
-string[] friendsName = {"Ali","Vali","Kali"};
+
+// string[] friendsName = {"Ali","Vali","Kali"};
 int[] friendsAge = {21,22,34};
 string[] adress = {"Uychi", "chouchi","Shousheng"};
+string[] friendsName=new string[3];
+friendsName[0]="Vasya";
+friendsName[1]="Ali";
+friendsName[2]=a;
+
 
 System.Console.WriteLine($"Dostim {friendsName[0]}ning yoshi {friendsAge[0]}da va {adress[0]}da turadi");
+System.Console.Write("1-indeksdagining yoshinui kiriting: ");
+friendsAge[1]=int.Parse(System.Console.ReadLine());
+
+foreach(string friendname in friendsName)
+{
+    System.Console.WriteLine(friendname);
+}
+
+for(int i=0;i<friendsName.Length;i++)
+{
+    System.Console.WriteLine($"Dostim {friendsName[i]}ning yoshi {friendsAge[i]}da va {adress[i]}da turadi");
+}
