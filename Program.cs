@@ -92,7 +92,16 @@ foreach(string friendname in friendsName)
     System.Console.WriteLine(friendname);
 }
 
-for(int i=0;i<friendsName.Length;i++)
+// for(int i=0;i<friendsName.Length;i++)
+// {
+//     System.Console.WriteLine($"Dostim {friendsName[i]}ning yoshi {friendsAge[i]}da va {adress[i]}da turadi");
+// }
+System.Console.WriteLine("");
+for(int i=1; i<10;i++)
 {
-    System.Console.WriteLine($"Dostim {friendsName[i]}ning yoshi {friendsAge[i]}da va {adress[i]}da turadi");
+    for(int j=1; j<10;j++)
+    {
+        System.Console.WriteLine($"{i} * {j} = {i*j}");
+    }
+    System.Console.WriteLine("");
 }
