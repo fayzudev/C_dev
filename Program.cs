@@ -1,4 +1,5 @@
-﻿// int sonlar = 10000;
+﻿using KESCHA.Classes;
+// int sonlar = 10000;
 // // short sonlarcha = 100;
 // // long sonlarr = 10000000;
 // Console.Write("Ismingizni kiriting: ");
@@ -44,6 +45,7 @@
 // System.Console.WriteLine(r);
 
 //converting
+Animal kescha=new Animal();
 // Console.Write("Enter your name: ");
 // string a = Console.ReadLine();
 // Console.WriteLine($"Is your name {a}");
@@ -58,6 +60,8 @@
 // Console.WriteLine($"Difference between with your and his age is: " + (ageDifference));
 // Console.WriteLine($"Is age difference bigger than HisAge: {ageDifference>=HisAge}");
 // System.Console.WriteLine("------------------------------------");
+
+// // // // // // Car Spark = new Car();
 
 System.Console.WriteLine("===================");
 System.Console.Write("Type first number: ");
