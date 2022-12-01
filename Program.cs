@@ -34,7 +34,7 @@
 // Console.WriteLine(asn);
 
 //new casting
-
+Animal kescha = new Animal();
 // int a=10;
 // int b=a;
 // int s=999999;
