@@ -105,10 +105,3 @@ for(int i=1; i<10;i++)
     }
     System.Console.WriteLine("");
 }
-string password;
-do
-{
-    System.Console.Write("Enter the password: ");
-    password=System.Console.ReadLine();
-}
-while(password!="pa$$w0rd");
