@@ -45,12 +45,11 @@
 // System.Console.WriteLine(r);
 
 //converting
-Animal kescha=new Animal();
+Animal kescha=new Animal(name:"Tatti",UserAge: AgeDifference);
 kescha.Age=4;
 kescha.Age1=10;
-Console.Write("Enter your name: ");
-string a = Console.ReadLine();
-Console.WriteLine($"Is your name {a}");
+string a = kescha.Name;
+System.Console.WriteLine(a);
 Console.Write("Enter your age: ");
 string b = Console.ReadLine();
 int age = Convert.ToInt32(b);
@@ -63,19 +62,19 @@ Console.WriteLine($"Difference between with your and his age is: " + (ageDiffere
 Console.WriteLine($"Is age difference bigger than HisAge: {ageDifference>=kescha.Age1}");
 System.Console.WriteLine("------------------------------------");
 
-car spark = new car();
-spark.Year=1996;
-System.Console.WriteLine("===================");
-System.Console.Write("Type first number: ");
-string first = System.Console.ReadLine();
-int ifirst=Convert.ToInt32(first);
-// System.Console.Write("Type second number: ");
-// string second = System.Console.ReadLine();
-// int isecond=Convert.ToInt32(second);
-System.Console.WriteLine($"Is first number bigger than second: {ifirst>spark.Year}");
-System.Console.WriteLine($"Is first number smaller than second: {ifirst<spark.Year}");
-System.Console.WriteLine($"Is first number bigger or equal to second: {ifirst>=spark.Year}");
-System.Console.WriteLine($"Is first number smaller or equal to second: {ifirst<=spark.Year}");
-System.Console.WriteLine($"Is first number equal second: {ifirst==spark.Year}");
-System.Console.WriteLine($"Is first number not equal to second: {ifirst!=spark.Year}");
-System.Console.WriteLine("=========================");
+// car spark = new car();
+// spark.Year=1996;
+// System.Console.WriteLine("===================");
+// System.Console.Write("Type first number: ");
+// string first = System.Console.ReadLine();
+// int ifirst=Convert.ToInt32(first);
+// // System.Console.Write("Type second number: ");
+// // string second = System.Console.ReadLine();
+// // int isecond=Convert.ToInt32(second);
+// System.Console.WriteLine($"Is first number bigger than second: {ifirst>spark.Year}");
+// System.Console.WriteLine($"Is first number smaller than second: {ifirst<spark.Year}");
+// System.Console.WriteLine($"Is first number bigger or equal to second: {ifirst>=spark.Year}");
+// System.Console.WriteLine($"Is first number smaller or equal to second: {ifirst<=spark.Year}");
+// System.Console.WriteLine($"Is first number equal second: {ifirst==spark.Year}");
+// System.Console.WriteLine($"Is first number not equal to second: {ifirst!=spark.Year}");
+// System.Console.WriteLine("=========================");
