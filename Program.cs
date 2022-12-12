@@ -45,21 +45,20 @@
 // System.Console.WriteLine(r);
 
 //converting
-Animal kescha=new Animal(name:"Tatti",UserAge: AgeDifference);
+System.Console.Write("Enter your age: ");
+int age=int.Parse(System.Console.ReadLine());
+Animal kescha=new Animal(name:"Tatti", UserAge: age);
 kescha.Age=4;
 kescha.Age1=10;
-string a = kescha.Name;
-System.Console.WriteLine(a);
-Console.Write("Enter your age: ");
-string b = Console.ReadLine();
-int age = Convert.ToInt32(b);
+// string a = kescha.Name;
+System.Console.WriteLine(kescha.Name);
 // Console.WriteLine($"Succesfully converted. Converted string was " + age);
 // Console.Write("Enter his age: ");
 // string hisAge = Console.ReadLine();
 // int HisAge = Convert.ToInt32(hisAge);
-int ageDifference= age - kescha.Age;
-Console.WriteLine($"Difference between with your and his age is: " + (ageDifference));
-Console.WriteLine($"Is age difference bigger than HisAge: {ageDifference>=kescha.Age1}");
+// int ageDifference= age - kescha.Age;
+Console.WriteLine($"Difference between with your and his age is: " + (kescha.ageDifference));
+Console.WriteLine($"Is age difference bigger than HisAge: {kescha.ageDifference>=kescha.Age1}");
 System.Console.WriteLine("------------------------------------");
 
 // car spark = new car();
