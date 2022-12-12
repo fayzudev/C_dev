@@ -45,6 +45,8 @@
 // System.Console.WriteLine(r);
 
 //converting
+System.Console.Write("Enter your name: ");
+string name = System.Console.ReadLine();
 System.Console.Write("Enter your age: ");
 int age=int.Parse(System.Console.ReadLine());
 Animal kescha=new Animal(name:"Tatti", UserAge: age);
@@ -61,6 +63,14 @@ Console.WriteLine($"Difference between with your and his age is: " + (kescha.age
 Console.WriteLine($"Is age difference bigger than HisAge: {kescha.ageDifference>=kescha.Age1}");
 System.Console.WriteLine("------------------------------------");
 
+
+System.Console.WriteLine("Tell me about your friends!");
+kescha.AboutmyFriends(friendsName: name);
+// string[] a = new string [3];
+// a[0]="Ali";
+// a[1]="Vali";
+// a[2]="Josh";
+// System.Console.WriteLine($"{a[0]}ning {a[1]} va {a[2]} ismli do'stlari bor");
 // car spark = new car();
 // spark.Year=1996;
 // System.Console.WriteLine("===================");
