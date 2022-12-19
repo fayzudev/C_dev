@@ -49,18 +49,22 @@ System.Console.Write("Enter your name: ");
 string name = System.Console.ReadLine();
 System.Console.Write("Enter your age: ");
 int age=int.Parse(System.Console.ReadLine());
-Animal kescha=new Animal(name:"Tatti", UserAge: age);
+System.Console.Write("Enter animal age: ");
+int Aage=int.Parse(System.Console.ReadLine());
+Animal kescha=new Animal(name:name, UserAge: age, AnimalAge: Aage);
 kescha.Age=4;
-kescha.Age1=10;
+kescha.Aage=10;
 // string a = kescha.Name;
-System.Console.WriteLine(kescha.Name);
+
+System.Console.WriteLine($"Salom {kescha.Name}, ishlaring qalay");
+kescha.greeting();
 // Console.WriteLine($"Succesfully converted. Converted string was " + age);
 // Console.Write("Enter his age: ");
 // string hisAge = Console.ReadLine();
 // int HisAge = Convert.ToInt32(hisAge);
 // int ageDifference= age - kescha.Age;
-Console.WriteLine($"Difference between with your and his age is: " + (kescha.ageDifference));
-Console.WriteLine($"Is age difference bigger than HisAge: {kescha.ageDifference>=kescha.Age1}");
+Console.WriteLine($"Difference between with your and animal age is: " + (kescha.ageDifference));
+Console.WriteLine($"Is age difference bigger than {kescha.Aage}: {kescha.ageDifference>=kescha.Aage}");
 System.Console.WriteLine("------------------------------------");
 
 

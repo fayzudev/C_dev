@@ -5,7 +5,7 @@ namespace KESCHA.Classes
         public int age;
         // int age1;
         public int Age;
-        public int Age1;
+        public int Aage;
 
         public string Name;
 
@@ -15,14 +15,14 @@ namespace KESCHA.Classes
         {
             Name = "Noname";
             Age = 36;
-            Age1=0;
+            Aage=0;
         }
-         public Animal(string name, int UserAge)
+         public Animal(string name, int UserAge, int AnimalAge)
         {
             Name=name;
             Age = UserAge;
-            Age1 = 10;
-            ageDifference=Age-Age1;
+            Aage = AnimalAge;
+            ageDifference=Age-Aage;
         }
         public void AboutmyFriends(string friendsName)
         {
@@ -31,6 +31,10 @@ namespace KESCHA.Classes
             a[1]="Vali";
             a[2]="Josh";
             System.Console.WriteLine($"{friendsName}ning {a[0]}, {a[1]} va {a[2]} ismli do'stlari bor");
+        }
+        public void greeting()
+        {
+            System.Console.WriteLine($"Salom {Name}, ishlaring qalay");
         }
         private int agedifferencebetweenuserandanimal( int UserAge, int Age1)
         {
