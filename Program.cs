@@ -50,10 +50,10 @@ string name = System.Console.ReadLine();
 System.Console.Write("Enter your age: ");
 int age=int.Parse(System.Console.ReadLine());
 System.Console.Write("Enter animal age: ");
-int Aage=int.Parse(System.Console.ReadLine());
-Animal kescha=new Animal(name:name, UserAge: age, AnimalAge: Aage);
-kescha.Age=4;
-kescha.Aage=10;
+int AnAge=int.Parse(System.Console.ReadLine());
+Animal kescha=new Animal(name:name, UserAge: age, AnimalAge: AnAge);
+// kescha.Age=4;
+// kescha.Aage=10;
 // string a = kescha.Name;
 
 System.Console.WriteLine($"Salom {kescha.Name}, ishlaring qalay");
@@ -64,7 +64,7 @@ kescha.greeting();
 // int HisAge = Convert.ToInt32(hisAge);
 // int ageDifference= age - kescha.Age;
 Console.WriteLine($"Difference between with your and animal age is: " + (kescha.ageDifference));
-Console.WriteLine($"Is age difference bigger than {kescha.Aage}: {kescha.ageDifference>=kescha.Aage}");
+Console.WriteLine($"Is age difference bigger than {kescha.AnAge}: {kescha.ageDifference>=kescha.AnAge}");
 System.Console.WriteLine("------------------------------------");
 
 
@@ -91,3 +91,70 @@ kescha.AboutmyFriends(friendsName: name);
 // System.Console.WriteLine($"Is first number equal second: {ifirst==spark.Year}");
 // System.Console.WriteLine($"Is first number not equal to second: {ifirst!=spark.Year}");
 // System.Console.WriteLine("=========================");
+
+if (kescha.Age==kescha.AnAge)
+{
+    System.Console.WriteLine($"Age of 1 person {kescha.Age} is equal to age of second person {kescha.AnAge}");
+}
+else if(kescha.Age>kescha.AnAge)
+{
+    System.Console.WriteLine($"Age of 1 person is bigger than age of second person!");
+}
+else
+{
+    System.Console.WriteLine($"Age of second person is bigger than age of first person!");
+}
+
+kescha.usingifelse();
+
+string message=
+    kescha.Age>kescha.AnAge
+        ? "Age of 1 person is bigger than age of second person!"
+        : "Age of second person is bigger than age of first person!";
+System.Console.WriteLine(message);
+
+kescha.usingstringmessage();
+
+// switch(operation)
+// {
+//     case "+":
+//         System.Console.WriteLine($"{b_age} + {HisAge} = {b_age+HisAge}");
+//         break;
+
+//     case "-":
+//         System.Console.WriteLine($"{b_age} - {HisAge} = {b_age-HisAge}");
+//         break;
+//     case "*":
+//         System.Console.WriteLine($"{b_age} * {HisAge} = {b_age*HisAge}");
+//         break;
+//     case "/":
+//         System.Console.WriteLine($"{b_age} / {HisAge} = {b_age/HisAge}");
+//         break;
+//     case "%":
+//         System.Console.WriteLine($"{b_age} % {HisAge} = {b_age%HisAge}");
+//         break;
+//     default:
+//             System.Console.WriteLine("Operation not found!");
+//         break;
+// }
+
+// string result = operation switch
+// {
+//     "+" => $"{b_age} + {HisAge} = {b_age+HisAge}",
+//     "-" => $"{b_age} - {HisAge} = {b_age-HisAge}",
+//     "*" => $"{b_age} * {HisAge} = {b_age*HisAge}",
+//     "/" => $"{b_age} / {HisAge} = {b_age/HisAge}",
+//     "%" => $"{b_age} % {HisAge} = {b_age%HisAge}",
+//     _  => "Operation not found!"
+// };
+// System.Console.WriteLine(result);
+// string result=operation switch
+// {
+//     "+" => $"{b_age} + {HisAge} = {b_age+HisAge}",
+//     "-" => $"{b_age} - {HisAge} = {b_age-HisAge}",
+//     "*" => $"{b_age} * {HisAge} = {b_age*HisAge}",
+//     "/" => $"{b_age} / {HisAge} = {b_age/HisAge}",
+//     "%" => $"{b_age} % {HisAge} = {b_age%HisAge}",
+//     _   => "Operation not found"
+// };
+// System.Console.WriteLine(result);

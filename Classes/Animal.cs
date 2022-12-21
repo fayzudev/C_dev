@@ -5,7 +5,7 @@ namespace KESCHA.Classes
         public int age;
         // int age1;
         public int Age;
-        public int Aage;
+        public int AnAge;
 
         public string Name;
 
@@ -15,14 +15,14 @@ namespace KESCHA.Classes
         {
             Name = "Noname";
             Age = 36;
-            Aage=0;
+            AnAge=0;
         }
          public Animal(string name, int UserAge, int AnimalAge)
         {
             Name=name;
             Age = UserAge;
-            Aage = AnimalAge;
-            ageDifference=Age-Aage;
+            AnAge = AnimalAge;
+            ageDifference=Age-AnAge;
         }
         public void AboutmyFriends(string friendsName)
         {
@@ -31,6 +31,33 @@ namespace KESCHA.Classes
             a[1]="Vali";
             a[2]="Josh";
             System.Console.WriteLine($"{friendsName}ning {a[0]}, {a[1]} va {a[2]} ismli do'stlari bor");
+        }
+        public void usingifelse()
+        {
+            System.Console.WriteLine(Age);
+            System.Console.WriteLine(AnAge);
+            if (Age==AnAge)
+            {
+                System.Console.WriteLine($"Age of 1 person {Age} is equal to age of second person {AnAge}");
+            }
+            else if(Age>AnAge)
+            {
+                System.Console.WriteLine($"Age of 1 person is bigger than age of second person!");
+            }
+
+            else
+            {
+                System.Console.WriteLine($"Age of second person is bigger than age of first person!");
+            }
+        }
+
+        public void usingstringmessage()
+        {
+            string message=
+                Age>AnAge
+                ? "Age of 1 person is bigger than age of second person!"
+                : "Age of second person is bigger than age of first person!";
+                Console.WriteLine(message);
         }
         public void greeting()
         {
