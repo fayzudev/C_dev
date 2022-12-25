@@ -105,3 +105,30 @@ for(int i=1; i<10;i++)
     }
     System.Console.WriteLine("");
 }
+
+string password = "";
+do
+{
+    System.Console.Write("Enter password: ");
+    password = System.Console.ReadLine();
+}
+while(password != "123456");
+
+if (b_age>0)
+{
+    int count=0;
+    while(count < b_age)
+    {
+        if(count % 2==0)
+        {
+           Console.WriteLine(count);
+            
+        }
+        count+=2;
+    }
+
+}
+else
+{
+    System.Console.WriteLine("404");
+}
