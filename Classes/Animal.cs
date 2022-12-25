@@ -2,7 +2,7 @@ namespace KESCHA.Classes
 {
     class Animal
     {
-        public int age;
+        // public int age;
         // int age1;
         public int Age;
         public int AnAge;
@@ -17,6 +17,13 @@ namespace KESCHA.Classes
             Age = 36;
             AnAge=0;
         }
+         public void greeting(string UserName, int UserAge, int AnimalAge)
+        {
+            Name=UserName;
+            Age = UserAge;
+            AnAge = AnimalAge;
+            Console.WriteLine($"Salom {Name}, ishlaring qalay");
+        }
          public Animal(string name, int UserAge, int AnimalAge)
         {
             Name=name;
@@ -30,24 +37,24 @@ namespace KESCHA.Classes
             a[0]="Ali";
             a[1]="Vali";
             a[2]="Josh";
-            System.Console.WriteLine($"{friendsName}ning {a[0]}, {a[1]} va {a[2]} ismli do'stlari bor");
+            Console.WriteLine($"{friendsName}ning {a[0]}, {a[1]} va {a[2]} ismli do'stlari bor");
         }
         public void usingifelse()
         {
-            System.Console.WriteLine(Age);
-            System.Console.WriteLine(AnAge);
+            Console.WriteLine(Age);
+            Console.WriteLine(AnAge);
             if (Age==AnAge)
             {
-                System.Console.WriteLine($"Age of 1 person {Age} is equal to age of second person {AnAge}");
+                Console.WriteLine($"Age of 1 person {Age} is equal to age of second person {AnAge}");
             }
             else if(Age>AnAge)
             {
-                System.Console.WriteLine($"Age of 1 person is bigger than age of second person!");
+                Console.WriteLine($"Age of 1 person is bigger than age of second person!");
             }
 
             else
             {
-                System.Console.WriteLine($"Age of second person is bigger than age of first person!");
+                Console.WriteLine($"Age of second person is bigger than age of first person!");
             }
         }
 
@@ -59,10 +66,51 @@ namespace KESCHA.Classes
                 : "Age of second person is bigger than age of first person!";
                 Console.WriteLine(message);
         }
-        public void greeting()
+
+        public void usingswitch(int UserAge)
         {
-            System.Console.WriteLine($"Salom {Name}, ishlaring qalay");
+            Console.Write("Choose one of the operations(+,-,*,/,%):");
+            string operation=Console.ReadLine();
+            switch(operation)
+            {
+                case "+":
+                    Console.WriteLine($"{UserAge} + {AnAge} = {UserAge+AnAge}");
+                    break;
+
+                case "-":
+                    Console.WriteLine($"{UserAge} - {AnAge} = {UserAge-AnAge}");
+                    break;
+                case "*":
+                    Console.WriteLine($"{UserAge} * {AnAge} = {UserAge*AnAge}");
+                    break;
+                case "/":
+                    Console.WriteLine($"{UserAge} / {AnAge} = {UserAge/AnAge}");
+                    break;
+                case "%":
+                    Console.WriteLine($"{UserAge} % {AnAge} = {UserAge%AnAge}");
+                    break;
+                default:
+                        Console.WriteLine("Operation not found!");
+                    break;
+            }
         }
+
+        public void usingresultswitch(int UserAge)
+        {
+            Console.Write("Choose one of the operations(+,-,*,/,%):");
+            string operation=Console.ReadLine();
+            string result = operation switch
+            {
+                "+" => $"{UserAge} + {AnAge} = {UserAge+AnAge}",
+                "-" => $"{UserAge} - {AnAge} = {UserAge-AnAge}",
+                "*" => $"{UserAge} * {AnAge} = {UserAge*AnAge}",
+                "/" => $"{UserAge} / {AnAge} = {UserAge/AnAge}",
+                "%" => $"{UserAge} % {AnAge} = {UserAge%AnAge}",
+                _  => "Operation not found!"
+            };
+            Console.WriteLine(result);
+        }
+       
         private int agedifferencebetweenuserandanimal( int UserAge, int Age1)
         {
             return UserAge-Age1;
