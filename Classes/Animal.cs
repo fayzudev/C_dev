@@ -1,6 +1,6 @@
 namespace KESCHA.Classes
 {
-    class Animal
+    public class Animal
     {
         // public int age;
         // int age1;
@@ -10,13 +10,18 @@ namespace KESCHA.Classes
         public string Name;
 
         public int ageDifference;
-        
-        public Animal()
+        public Animal(string name, int UserAge, int AnimalAge)
         {
-            Name = "Noname";
-            Age = 36;
-            AnAge=0;
+            Name=name;
+            Age = UserAge;
+            AnAge = AnimalAge;
         }
+        // public Animal()
+        // {
+        //     Name = "Noname";
+        //     Age = 36;
+        //     AnAge=0;
+        // }
          public void greeting(string UserName, int UserAge, int AnimalAge)
         {
             Name=UserName;
@@ -24,13 +29,7 @@ namespace KESCHA.Classes
             AnAge = AnimalAge;
             Console.WriteLine($"Salom {Name}, ishlaring qalay");
         }
-         public Animal(string name, int UserAge, int AnimalAge)
-        {
-            Name=name;
-            Age = UserAge;
-            AnAge = AnimalAge;
-            ageDifference=Age-AnAge;
-        }
+        
         public void AboutmyFriends(string friendsName)
         {
             string[] a = new string [3];

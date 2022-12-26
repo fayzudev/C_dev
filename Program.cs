@@ -1,13 +1,14 @@
 ﻿using KESCHA.Classes;
-Animal kescha=new Animal();
+Animal kescha=new Bird(name:"Kescha", UserAge:26, AnimalAge:10);
+Animal kasee = new Pet(name:"Kasee", UserAge: 26, AnimalAge:2);
 //converting
 System.Console.Write("Enter your name: ");
-string UserName = System.Console.ReadLine();
+string UserName = Console.ReadLine();
 System.Console.Write("Enter your age: ");
-int UserAge=int.Parse(System.Console.ReadLine());
+int UserAge=int.Parse(Console.ReadLine());
 System.Console.Write("Enter animal age: ");
-int AnimaAge=int.Parse(System.Console.ReadLine());
-kescha.greeting(UserName,UserAge,AnimaAge);
+int AnimalAge=int.Parse(Console.ReadLine());
+kescha.greeting(UserName,UserAge,AnimalAge);
 
 // System.Console.WriteLine($"Salom {kescha.Name}, ishlaring qalay");
 
