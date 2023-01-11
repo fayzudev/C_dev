@@ -1,6 +1,6 @@
 namespace KESCHA.Classes
 {
-    public class Animal
+    public abstract class Animal
     {
         // public int age;
         // int age1;
@@ -109,7 +109,7 @@ namespace KESCHA.Classes
             };
             Console.WriteLine(result);
         }
-       
+        public abstract void greeting2();
         private int agedifferencebetweenuserandanimal( int UserAge, int Age1)
         {
             return UserAge-Age1;

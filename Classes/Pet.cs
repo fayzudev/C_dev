@@ -7,5 +7,10 @@ namespace KESCHA.Classes
             {
 
             }
+
+        public override void greeting2()
+        {
+            System.Console.WriteLine();
+        }
     }
 }
