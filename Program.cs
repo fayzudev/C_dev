@@ -8,8 +8,13 @@ System.Console.Write("Enter your age: ");
 int UserAge=int.Parse(Console.ReadLine());
 System.Console.Write("Enter animal age: ");
 int AnimalAge=int.Parse(Console.ReadLine());
-kescha.greeting(UserName,UserAge,AnimalAge);
+// kescha.greeting(UserName,UserAge,AnimalAge);
+// kasee.greeting(UserName,UserAge,AnimalAge);
+
+kescha.greeting2(UserName);
+kasee.greeting2(UserName);
 System.Console.WriteLine("Tell me about your friends!");
+
 kescha.AboutmyFriends(friendsName: UserName);
 System.Console.WriteLine("------");
 kescha.usingifelse();

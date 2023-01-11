@@ -22,12 +22,20 @@ namespace KESCHA.Classes
         //     Age = 36;
         //     AnAge=0;
         // }
-         public void greeting(string UserName, int UserAge, int AnimalAge)
+        public void greeting(string UserName, int UserAge, int AnimalAge)
         {
             Name=UserName;
             Age = UserAge;
             AnAge = AnimalAge;
             Console.WriteLine($"Salom {Name}, ishlaring qalay");
+        }
+        public virtual void greeting2(string UserName)
+        {
+            if(UserName=="")
+            {
+                System.Console.WriteLine("Unkown person");
+            }
+            System.Console.WriteLine($"Salom {UserName}");
         }
         
         public void AboutmyFriends(string friendsName)
