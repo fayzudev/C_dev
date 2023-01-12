@@ -9,7 +9,12 @@ namespace KESCHA.Classes
         }
         public override void greeting2(string UserName)
         {
-            System.Console.WriteLine($"Hello {UserName}");
+            Console.WriteLine($"Hello {UserName}");
+        }
+
+        public override void greeting3(string UserName)
+        {
+            Console.WriteLine("Abstracted method implemented");
         }
     }
 }

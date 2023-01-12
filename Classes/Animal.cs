@@ -1,6 +1,6 @@
 namespace KESCHA.Classes
 {
-    public class Animal
+    public abstract class Animal : IAnimal
     {
         // public int age;
         // int age1;
@@ -10,11 +10,13 @@ namespace KESCHA.Classes
         public string Name;
 
         public int ageDifference;
+        public DateTimeOffset createdDate { get; set; }
         public Animal(string name, int UserAge, int AnimalAge)
         {
             Name=name;
             Age = UserAge;
             AnAge = AnimalAge;
+            createdDate=DateTimeOffset.Now;
         }
         // public Animal()
         // {
@@ -28,6 +30,7 @@ namespace KESCHA.Classes
             Age = UserAge;
             AnAge = AnimalAge;
             Console.WriteLine($"Salom {Name}, ishlaring qalay");
+            createdDate=DateTimeOffset.Now;
         }
         public virtual void greeting2(string UserName)
         {
@@ -37,6 +40,8 @@ namespace KESCHA.Classes
             }
             System.Console.WriteLine($"Salom {UserName}");
         }
+
+        public abstract void greeting3(string UserName);
         
         public void AboutmyFriends(string friendsName)
         {
