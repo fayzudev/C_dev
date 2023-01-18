@@ -129,6 +129,3 @@ namespace KESCHA.Classes
         }
     }
 }
-//ggghsdhcddsdas
-//dsadsad
-//sa
