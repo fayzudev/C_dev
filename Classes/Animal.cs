@@ -36,7 +36,7 @@ namespace KESCHA.Classes
         {
             if(UserName=="")
             {
-                System.Console.WriteLine("Unkown person");
+                System.Console.WriteLine("Unknown person");
             }
             System.Console.WriteLine($"Salom {UserName}");
         }
