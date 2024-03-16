@@ -37,6 +37,10 @@ internal class Program
             kescha.usingswitch(UserAge);
             Console.WriteLine("------");
             kescha.usingresultswitch(UserAge);
+            Console.WriteLine("------");
+            kescha.usingswitch(UserAge);
+            Console.WriteLine("------");
+            kescha.usingresultswitch(UserAge);
         }
         catch(FormatException formatexception)
         {
@@ -49,5 +53,6 @@ internal class Program
         }
         
         System.Console.WriteLine("Program was ended!");
+        String S="sad";
     }
 }
