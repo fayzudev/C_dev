@@ -1,4 +1,4 @@
-﻿System.Console.WriteLine("Program about beauty pig named KESCHA!!!");
+﻿System.Console.WriteLine("Program about a beauty parrot named KESCHA!!!");
 System.Console.WriteLine();
 System.Console.WriteLine();
 
@@ -206,3 +206,5 @@ string result = operation switch
         _   => "Operation not found!"
     };
 System.Console.WriteLine(result);
+
+///////////////////////////////
