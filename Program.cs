@@ -1,53 +1,109 @@
-﻿// 1. String tipida (string str) qiymat berilgan. Consoleda int tipidagi qiymat kiriting. 
-// Agar bu son str ning uzunligidan katta bo’lsa, str ni katta harflarga o’giring, aks holda kichik harflarga o’giring.
-// Input: x=13, str=”teLefOn”
-// Output: “TELEFON”
+﻿// // 1. String tipida (string str) qiymat berilgan. Consoleda int tipidagi qiymat kiriting. 
+// // Agar bu son str ning uzunligidan katta bo’lsa, str ni katta harflarga o’giring, aks holda kichik harflarga o’giring.
+// // Input: x=13, str=”teLefOn”
+// // Output: “TELEFON”
 
-System.Console.WriteLine("Int tipida son kiriting: ");
-int son=Convert.ToInt32(System.Console.ReadLine());
-string qiymat="SalomiddiN";
-System.Console.WriteLine(qiymat.Length);
-if(son>qiymat.Length)
-    {
-        System.Console.WriteLine(qiymat.ToUpper());
-    }
-else
-    {
-        System.Console.WriteLine(qiymat.ToLower());   
-    }
+// System.Console.WriteLine("Int tipida son kiriting: ");
+// int son=Convert.ToInt32(System.Console.ReadLine());
+// string qiymat="SalomiddiN";
+// System.Console.WriteLine(qiymat.Length);
+// if(son>qiymat.Length)
+//     {
+//         System.Console.WriteLine(qiymat.ToUpper());
+//     }
+// else
+//     {
+//         System.Console.WriteLine(qiymat.ToLower());   
+//     }
+
+// // 2.
+// int x=15;
+// int y=10;
+// if(x>y)
+//     {
+//         System.Console.WriteLine("x is greater than y");
+//     }
+// else if (x<y)
+//     {
+//         System.Console.WriteLine("x is less than y");
+//     }
+// else if(x==y)
+//     {
+//         System.Console.WriteLine("x is equal to y");
+//     }
+// else
+//     {
+//         System.Console.WriteLine("x and y are not comparable");
+//     }
+
+// // 3.
+// System.Console.WriteLine("Hafta kunlarini kiriting: ");
+// string haf_kunlari=System.Console.ReadLine();
+// string result=haf_kunlari.ToLower() switch 
+// {
+//     "dushanba"=>$"Dushanba kunining tarjimasi Monday", 
+//     "seshanba"=>$"Dushanba kunining tarjimasi Monday", 
+//     "chorshanba"=>$"Dushanba kunining tarjimasi Monday", 
+//     "payshnba"=>$"Dushanba kunining tarjimasi Monday", 
+//     "juma"=>$"Dushanba kunining tarjimasi Monday", 
+//     "shanba"=>$"Dushanba kunining tarjimasi Monday", 
+//     "yakshanba"=>$"Dushanba kunining tarjimasi Monday",
+//     _       => "Hafta kuni topilmadi"
+// };
+// System.Console.WriteLine(result);
+
+//Basics.Tanlash bo'limi uchun 2-amaliy vazifa
+// 1.
+System.Console.WriteLine("Vaqt kiriting(soniyalarda hisoblanadi): ");
+int time=int.Parse(System.Console.ReadLine());
+int minute=time/60;
+System.Console.WriteLine($"{minute}:{time-minute*60}");
 
 // 2.
-int x=15;
-int y=10;
-if(x>y)
+System.Console.WriteLine("Enter your age: ");
+int age=Convert.ToInt32(System.Console.ReadLine());
+if(age>=0 && age<=12)
     {
-        System.Console.WriteLine("x is greater than y");
+        System.Console.WriteLine($"Your age is {age} and you are child");
     }
-else if (x<y)
+else if(age>12 && age<=19)
     {
-        System.Console.WriteLine("x is less than y");
+        System.Console.WriteLine($"Your age is {age} and you are teenager");
     }
-else if(x==y)
+else if(age>19 && age<=59)
     {
-        System.Console.WriteLine("x is equal to y");
+        System.Console.WriteLine($"Your age is {age} and you are older");
     }
-else
-    {
-        System.Console.WriteLine("x and y are not comparable");
-    }
+else System.Console.WriteLine($"Your age is {age} and you are senior");
 
 // 3.
-System.Console.WriteLine("Hafta kunlarini kiriting: ");
-string haf_kunlari=System.Console.ReadLine();
-string result=haf_kunlari.ToLower() switch 
-{
-    "dushanba"=>$"Dushanba kunining tarjimasi Monday", 
-    "seshanba"=>$"Dushanba kunining tarjimasi Monday", 
-    "chorshanba"=>$"Dushanba kunining tarjimasi Monday", 
-    "payshnba"=>$"Dushanba kunining tarjimasi Monday", 
-    "juma"=>$"Dushanba kunining tarjimasi Monday", 
-    "shanba"=>$"Dushanba kunining tarjimasi Monday", 
-    "yakshanba"=>$"Dushanba kunining tarjimasi Monday",
-    _       => "Hafta kuni topilmadi"
-};
+System.Console.WriteLine("Enter a ball from 1st subject: ");
+int first_subject=Convert.ToInt32(System.Console.ReadLine());
+System.Console.WriteLine("Enter a ball from 2nd subject: ");
+int second_subject=Convert.ToInt32(System.Console.ReadLine());
+System.Console.WriteLine("Enter a ball from 3rd subject: ");
+int third_subject=Convert.ToInt32(System.Console.ReadLine());
+int overall=(first_subject+second_subject+third_subject)/3;
+string result=
+    first_subject>100 || second_subject>100 || third_subject>100
+        ? "Mark can not be up to 100"
+        : overall>=80 && overall<=100
+            ? "Your mark is perfect"
+            : overall>=60 && overall<=79
+                ? "Your mark is good"
+                : overall >=40 && overall<=59
+                    ? "Your mark is acceptable"
+                    : "Your mark is unacceptable";
+    
 System.Console.WriteLine(result);
+
+// 4.
+System.Console.WriteLine("Enter a number in your mind: ");
+int num=Convert.ToInt32(System.Console.ReadLine());
+Random rand=new Random();
+int tas=rand.Next(100);
+string res=
+    tas>=num
+    ? "A number in your mind is less than randomized number"
+    : "A number in your mind is bigger than randomized number";
+System.Console.WriteLine($"{res}. Number in your mind was {num}, randomized number is {tas}");
