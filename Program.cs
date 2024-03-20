@@ -1,4 +1,7 @@
-﻿System.Console.WriteLine("Program about a beauty parrot named KESCHA!!!");
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
+
+System.Console.WriteLine("Program about a beauty parrot named KESCHA!!!");
 System.Console.WriteLine();
 System.Console.WriteLine();
 
@@ -166,14 +169,14 @@ System.Console.WriteLine();
 // }
 
 /////////////////////////////////////////
-System.Console.WriteLine("Program about CALCULATOR!!!");
-System.Console.WriteLine("--------------");
-System.Console.WriteLine("Enter first number: ");
-int firstNumber=int.Parse(System.Console.ReadLine());
-System.Console.WriteLine("Choose an operation(+,-,*,/,%): ");
-string operation = System.Console.ReadLine();
-System.Console.WriteLine("Enter second number: ");
-int secondNumber = Convert.ToInt32(System.Console.ReadLine());
+// System.Console.WriteLine("Program about CALCULATOR!!!");
+// System.Console.WriteLine("--------------");
+// System.Console.WriteLine("Enter first number: ");
+// int firstNumber=int.Parse(System.Console.ReadLine());
+// System.Console.WriteLine("Choose an operation(+,-,*,/,%): ");
+// string operation = System.Console.ReadLine();
+// System.Console.WriteLine("Enter second number: ");
+// int secondNumber = Convert.ToInt32(System.Console.ReadLine());
 // switch (operation)
 //     {
 //         case "+": 
@@ -196,15 +199,50 @@ int secondNumber = Convert.ToInt32(System.Console.ReadLine());
 //             break;
 //     }
 
-string result = operation switch
-    {
-        "+" => $"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}",
-        "-" => $"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}",
-        "*" => $"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}",
-        "/" => $"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}",
-        "%" => $"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}",
-        _   => "Operation not found!"
-    };
-System.Console.WriteLine(result);
+// string result = operation switch
+//     {
+//         "+" => $"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}",
+//         "-" => $"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}",
+//         "*" => $"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}",
+//         "/" => $"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}",
+//         "%" => $"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}",
+//         _   => "Operation not found!"
+//     };
+// System.Console.WriteLine(result);
 
 ///////////////////////////////
+
+// while(firstNumber>10)
+//     {
+//         System.Console.WriteLine("It's done");
+//     }
+
+// string password="";
+// do
+//     {
+//         System.Console.Write("Enter password: ");
+//         password=System.Console.ReadLine();
+        
+//     }
+// while(password != "12345678");
+
+// string[] friendsName={"Ali", "Vli", "Nizom", "Joni"};
+// int[] FriensAge={18,19,20,26};
+// string[] FrAddress={"Andijan", "Namangan","Andijan","Fargona"};
+// // System.Console.WriteLine($"{friendsName[0]} is {FriensAge[0]} years old and he is from {FrAddress[0]}");
+// for(int i=0;i<=friendsName.Length-1;i++)
+// {
+//     System.Console.WriteLine($"{friendsName[i]} is {FriensAge[i]} years old and he is from {FrAddress[i]}");
+// }
+
+// System.Console.WriteLine("Necha xonalik karra jadvali hohlaysiz: ");
+// int karra=Convert.ToInt32(System.Console.ReadLine());
+// System.Console.WriteLine();
+// for(int i=1;i<=10;i++)
+// {
+//     for(int j=1;j<=karra;j++)
+//     {
+//         System.Console.WriteLine($"{i} * {j} = {i*j}");
+//     }
+//     System.Console.WriteLine();
+// }
