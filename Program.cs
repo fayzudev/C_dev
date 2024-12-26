@@ -155,3 +155,22 @@
 //     factorial*=i;
 // }
 // System.Console.WriteLine($"Factorial of the typed value is {factorial}");
+
+Console.Write("Radiusni kiriting: ");
+double r = double.Parse(Console.ReadLine());
+double S = Math.PI * Math.Pow(r, 2);
+double L = Math.PI * r * 2;
+Console.WriteLine($"Doira yuzi S={S} va doira uzunligi L={L}");
+Console.ReadKey();
+
+Console.Write("Necha dollar almashtirmoqchisiz?: ");
+int dollar = int.Parse(Console.ReadLine());
+Console.WriteLine("Xozirgi kurs: 12400 so'm");
+int qiymat = dollar * 12400;
+Console.WriteLine($"Sizga {qiymat} so'm beriladi");
+
+
+Console.Write("Tug'ilgan yilingizni kiriting: ");
+int yosh=int.Parse(Console.ReadLine());
+int kun = (2024 - yosh) * 365;
+Console.WriteLine($"Siz {kun} kunlik bo'ldingiz!");
