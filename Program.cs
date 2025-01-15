@@ -174,3 +174,49 @@ Console.Write("Tug'ilgan yilingizni kiriting: ");
 int yosh=int.Parse(Console.ReadLine());
 int kun = (2024 - yosh) * 365;
 Console.WriteLine($"Siz {kun} kunlik bo'ldingiz!");
+
+Console.WriteLine("1-raqamni kiriting: ");
+int BirinchiSon = int.Parse(Console.ReadLine());
+Console.WriteLine("Qanday amal bajarmoqchisiz(+,-,*,/,%): ");
+string result = Console.ReadLine();
+Console.WriteLine("2-raqamni kiriting:");
+int IkkinchiSon = int.Parse(Console.ReadLine());
+switch (result)
+{
+    case "+":
+        Console.WriteLine($"{BirinchiSon}+{IkkinchiSon}={BirinchiSon + IkkinchiSon}");
+        break;
+    case "-":
+        Console.WriteLine($"{BirinchiSon}-{IkkinchiSon}={BirinchiSon - IkkinchiSon}");
+        break;
+    case "*":
+        Console.WriteLine($"{BirinchiSon}*{IkkinchiSon}={BirinchiSon * IkkinchiSon}");
+        break;
+    case "/":
+        Console.WriteLine($"{BirinchiSon}/{IkkinchiSon}={BirinchiSon / IkkinchiSon}");
+        break;
+    case "%":
+        Console.WriteLine($"{BirinchiSon}%{IkkinchiSon}={BirinchiSon % IkkinchiSon}");
+        break;
+    default:
+        Console.WriteLine("There is no operation");
+        break;
+}
+
+Console.WriteLine("Please enter the number: ");
+int number=int.Parse(Console.ReadLine());
+int Sum = 0;
+int value = 1;
+while (value <= number) 
+    {
+        Sum+=value;
+        value++;
+    }
+Console.WriteLine($"Sum is {Sum}");
+
+Console.WriteLine("Please enter the number: ");
+int number=Convert.ToInt32(Console.ReadLine());
+if (number % 2==1)
+    { Console.WriteLine("Number is odd"); }
+else 
+    { Console.WriteLine("Number is even"); }
