@@ -213,10 +213,75 @@ while (value <= number)
         value++;
     }
 Console.WriteLine($"Sum is {Sum}");
-
+//------------------
 Console.WriteLine("Please enter the number: ");
 int number=Convert.ToInt32(Console.ReadLine());
 if (number % 2==1)
     { Console.WriteLine("Number is odd"); }
 else 
     { Console.WriteLine("Number is even"); }
+//---------------
+Console.Write("Biror son kiriting: ");
+int son = int.Parse(Console.ReadLine());
+
+if (son <= 1)
+{
+    Console.WriteLine("Tub emas");
+}
+else
+{
+    bool tub = true;
+
+    for (int i = 2; i < son; i++)
+    {
+        if (son % i == 0)
+        {
+            tub = false;
+            break;
+        }
+    }
+
+    if (tub)
+    {
+        Console.WriteLine("Tub");
+    }
+    else
+    {
+        Console.WriteLine("Tub emas");
+    }
+}
+//--------------
+Console.Write("Enter the any number: ");
+int num=int.Parse(Console.ReadLine());
+
+for (int i = 2; i <= 10; i++) 
+    {
+    if (num % i == 0)
+        {
+        Console.Write($"Sonlar: {i} "); 
+        }
+    }
+Console.WriteLine("-------------------------");
+Console.Write("Son kiriting: ");
+int son = int.Parse(Console.ReadLine());
+
+bool tub = false;
+
+Console.Write("Bo'luvchilari: ");
+for (int i = 2; i <= 10; i++)
+{
+    if (son % i == 0)
+    {
+        if (tub)
+        {
+            Console.Write(", ");
+        }
+        Console.Write(i);
+        tub = true;
+    }
+}
+
+if (!tub)
+{
+    Console.WriteLine("yo'q.");
+}
